@@ -10,7 +10,7 @@ See a video of it [here](https://youtu.be/G3XoOCMnSNg)!
 
 ## Usage
 
-Download the document from the latest github release, open it, and double-click the run button.
+Download the document from the latest [github release](https://github.com/wojciech-graj/doom-docm/releases), open it, and double-click the run button.
 
 ## Build
 Requires Make and a MinGW compiler. Creates `bin/doomgeneric_docm.dll`
