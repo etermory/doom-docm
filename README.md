@@ -6,6 +6,8 @@
 
 Source-port of [doomgeneric](https://github.com/ozkl/doomgeneric). Does not have sound. Requires an x64 CPU architecture.
 
+See a video of it [here](https://youtu.be/G3XoOCMnSNg)!
+
 ## Usage
 
 Download the document from the latest github release, open it, and double-click the run button.
