@@ -1,15 +1,12 @@
 Option Explicit
-Option Base 0
 
 Private Declare PtrSafe Function LoadLibrary Lib "kernel32" Alias "LoadLibraryA" (ByVal lpLibFileName As String) As LongPtr
 
 Private Declare PtrSafe Sub doomgeneric_Create Lib "doomgeneric_docm.dll" (ByVal dir As LongPtr)
 Private Declare PtrSafe Sub doomgeneric_Tick Lib "doomgeneric_docm.dll" ()
 
-Private Sub drawFrame()
+Private Sub DrawFrame()
     Dim shp As InlineShape
-    Dim width As Single
-    Dim img As InlineShape
     Dim dirPath As String
     Dim outputFramePath As String
     Dim framePath As String
@@ -22,22 +19,23 @@ Private Sub drawFrame()
     For Each shp In ThisDocument.InlineShapes
         shp.Delete
     Next shp
-    If dir(framePath) <> "" Then
-        Kill framePath
-    End If
     FileCopy outputFramePath, framePath
-    Set img = ThisDocument.InlineShapes.AddPicture( _
-        FileName:=framePath, _
-        LinkToFile:=True, SaveWithDocument:=False)
+    ThisDocument.InlineShapes.AddPicture FileName:=framePath, LinkToFile:=True, SaveWithDocument:=False
 End Sub
 
-Sub doom()
+Sub Doom()
+    Static hasRun As Boolean
     Dim dllPath As String
     Dim dirPath As String
     Dim hModule As LongPtr
     Dim result As Long
     Dim dirAnsi As String
     Dim dirPtr As LongPtr
+
+    If hasRun Then
+        Exit Sub
+    End If
+    hasRun = True
 
     CreateDoomGenericDocmDll
     CreateDoom1Wad
@@ -57,7 +55,7 @@ Sub doom()
 
     Do While True
         doomgeneric_Tick
-        drawFrame
+        DrawFrame
         DoEvents
     Loop
 End Sub
