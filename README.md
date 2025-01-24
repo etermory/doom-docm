@@ -12,9 +12,14 @@ See a video of it [here](https://youtu.be/G3XoOCMnSNg)!
 
 ## Usage
 
-Download the document from the latest [github release](https://github.com/wojciech-graj/doom-docm/releases), open it, and enable macros.
+1. Download `doom.docm` from the latest [github release](https://github.com/wojciech-graj/doom-docm/releases)
+2. Right click on the file, select **Properties**
+3. Select the **General** tab
+4. Select **Unblock**
+5. Open the file in Microsoft Word
+6. Select **Enable Content** in the security warning bar
 
-Actually opening the document is a bit of a hassle, as Microsoft is (rightfully?) not too keen on having dlls extracted and run from within word documents, so expect to have to fight Windows Defender.
+Additionally, expect to have to fight Windows Defender, as Microsoft is (rightfully) not too keen on having Word document extracting and running executables.
 
 ## How it works
 
