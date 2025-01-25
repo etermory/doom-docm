@@ -19,7 +19,7 @@ See a video of it [here](https://youtu.be/G3XoOCMnSNg)!
 5. Open the file in Microsoft Word
 6. Select **Enable Content** in the security warning bar
 
-Additionally, expect to have to fight Windows Defender, as Microsoft is (rightfully) not too keen on having Word document extracting and running executables.
+Additionally, expect to have to fight Windows Defender, as Microsoft is (rightfully) not too keen on having Word documents extracting and running executables.
 
 ## How it works
 
